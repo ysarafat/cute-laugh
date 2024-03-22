@@ -1,11 +1,10 @@
 import image from "@/../public/hero-bg.webp";
 import Image from "next/image";
-import Container from "../shared/Container";
-import TopProduct from "./Hero/TopProduct";
+import Container from "../../shared/Container";
+import TopProduct from "./TopProduct";
 const Hero = () => {
   return (
     <>
-      {" "}
       <Container className="py-10 flex md:flex-row-reverse flex-col  justify-between items-center gap-4">
         <div className="text-end">
           <h1 className="font-bold text-5xl ">
