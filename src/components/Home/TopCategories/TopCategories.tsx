@@ -11,7 +11,7 @@ const TopCategories = async () => {
 
   return (
     <Container>
-      <div className="text-center my-5">
+      <div className="text-center my-10">
         <h1 className="text-4xl font-bold">Top Categories</h1>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque,

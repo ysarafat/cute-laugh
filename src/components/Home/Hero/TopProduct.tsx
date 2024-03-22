@@ -1,39 +1,32 @@
-import image from "@/../public/hero-bg.webp";
 import Container from "@/components/shared/Container";
+import HeroProductCard from "@/components/shared/Product/HeroProductCard";
 import {
   Carousel,
   CarouselContent,
+  CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
+import { TProduct } from "@/types/product";
 
-const TopProduct = () => {
+const TopProduct = async () => {
+  const res = await fetch("http://localhost:5000/api/flash-sale");
+  const { data: products } = await res.json();
   return (
-    <Container>
+    <Container className="mb-28">
       <Carousel className="mx-auto">
         <CarouselContent>
-          {/* {recentEvents?.data?.map((event: TEvent) => (
-                <CarouselItem
-                  key={event?._id}
-                  className="basis-1/1 md:basis-1/3 lg:basis-1/4"
-                >
-                  <div className="bg-[#F2F2F2] rounded-lg">
-                    <img
-                      src={event?.image}
-                      alt=""
-                      className="w-full h-[220px] rounded-t-lg"
-                    />
-                    <div className="p-4">
-                      <p className="">{event?.title}</p>
-                      <p className="text-[#475569] text-sm">by {event?.by}</p>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))} */}
-          <div>
-            <Image src={image} alt="image" />
-          </div>
+          {products?.map((product: TProduct) => (
+            <CarouselItem
+              key={product?._id}
+              className="basis-1/1 md:basis-1/3 lg:basis-1/5 w-[244px]"
+            >
+              <HeroProductCard
+                product={product}
+                key={product._id}
+              ></HeroProductCard>
+            </CarouselItem>
+          ))}
         </CarouselContent>
         <div className="hidden lg:block">
           <CarouselPrevious />

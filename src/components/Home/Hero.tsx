@@ -1,6 +1,7 @@
 import image from "@/../public/hero-bg.webp";
 import Image from "next/image";
 import Container from "../shared/Container";
+import TopProduct from "./Hero/TopProduct";
 const Hero = () => {
   return (
     <>
@@ -34,7 +35,7 @@ const Hero = () => {
           />
         </div>
       </Container>
-      {/* <TopProduct /> */}
+      <TopProduct />
     </>
   );
 };
