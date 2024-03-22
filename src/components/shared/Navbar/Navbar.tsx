@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="bg-blue-50 py-3 border-b relative">
       <Container className="flex justify-between items-center ">
         <Logo />
-        <div className="text-lg hidden md:block">
+        <div className="hidden md:block">
           <ul className="flex items-center gap-x-4">
             <li>
               <Link href="/">Home</Link>
@@ -32,7 +32,7 @@ const Navbar = () => {
         </div>
         <MobileNav />
         <div className="hidden md:block">
-          <button className="border bg-white py-1 px-4  text-lg rounded-md">
+          <button className="border bg-white py-1 px-4  rounded-md">
             Login
           </button>
         </div>

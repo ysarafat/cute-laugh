@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Jost } from "next/font/google";
+import { Oxygen } from "next/font/google";
 import "./globals.css";
 
-const jost = Jost({
+const oxygen = Oxygen({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jost.className}>{children}</body>
+      <body className={oxygen.className}>{children}</body>
     </html>
   );
 }
