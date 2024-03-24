@@ -1,5 +1,6 @@
 import { TProduct } from "@/types/product";
 import Image from "next/image";
+import Link from "next/link";
 import { ImPower } from "react-icons/im";
 type TCard = {
   product: TProduct;
@@ -36,7 +37,9 @@ const Card = ({ product, sales }: TCard) => {
           <span className="text-2xl font-bold text-blue-500 ">
             ${product.price}
           </span>
-          <button className="btn">View Details</button>
+          <Link href={`/products/${product._id}`}>
+            <button className="btn">View Details</button>
+          </Link>
         </div>
       </div>
     </div>
