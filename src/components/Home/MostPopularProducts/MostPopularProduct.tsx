@@ -4,11 +4,14 @@ import { TProduct } from "@/types/product";
 import { IoIosArrowForward } from "react-icons/io";
 
 const MostPopularProduct = async () => {
-  const res = await fetch("http://localhost:5000/api/flash-sale", {
-    next: {
-      revalidate: 30,
-    },
-  });
+  const res = await fetch(
+    "https://cute-laugh-backend.vercel.app/api/flash-sale",
+    {
+      next: {
+        revalidate: 30,
+      },
+    }
+  );
   const { data: products } = await res.json();
   return (
     <Container className="my-16">

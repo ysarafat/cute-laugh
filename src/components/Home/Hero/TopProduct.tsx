@@ -10,7 +10,9 @@ import {
 import { TProduct } from "@/types/product";
 
 const TopProduct = async () => {
-  const res = await fetch("http://localhost:5000/api/flash-sale");
+  const res = await fetch(
+    "https://cute-laugh-backend.vercel.app/api/flash-sale"
+  );
   const { data: products } = await res.json();
   return (
     <Container className="mb-28">

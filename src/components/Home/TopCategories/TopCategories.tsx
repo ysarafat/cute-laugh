@@ -2,11 +2,14 @@ import Container from "@/components/shared/Container";
 import Image from "next/image";
 
 const TopCategories = async () => {
-  const res = await fetch("http://localhost:5000/api/categories", {
-    next: {
-      revalidate: 30,
-    },
-  });
+  const res = await fetch(
+    "https://cute-laugh-backend.vercel.app/api/categories",
+    {
+      next: {
+        revalidate: 30,
+      },
+    }
+  );
   const { data: categories } = await res.json();
 
   return (
