@@ -8,7 +8,7 @@ const Hero = () => {
     <>
       <Container className="py-10 flex md:flex-row-reverse flex-col  justify-between items-center gap-4">
         <div className="text-end">
-          <h1 className="font-bold text-5xl ">
+          <h1 className="font-bold lg:text-5xl text-3xl  ">
             Crafting Comfort, Redefining Spaces.
           </h1>
           <p className="mt-5">

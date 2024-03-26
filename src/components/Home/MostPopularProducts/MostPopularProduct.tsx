@@ -1,6 +1,7 @@
 import Container from "@/components/shared/Container";
 import Card from "@/components/shared/Product/Card";
 import { TProduct } from "@/types/product";
+import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 
 const MostPopularProduct = async () => {
@@ -16,12 +17,12 @@ const MostPopularProduct = async () => {
   return (
     <Container className="my-16">
       <div className="flex justify-between items-center">
-        <h1 className=" text-2xl md:text-4xl font-bold ">
-          Most Popular Products
-        </h1>
-        <button className="btn ">
-          See All Products <IoIosArrowForward size={20} />
-        </button>
+        <h1 className=" text-2xl md:text-4xl font-bold ">Trending Products</h1>
+        <Link href="/products">
+          <button className="btn ">
+            See All Products <IoIosArrowForward size={20} />
+          </button>
+        </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-10">
         {products?.slice(0, 8).map((product: TProduct) => (

@@ -39,7 +39,7 @@ const Footer = () => {
               <li>
                 <Link
                   className="hover:text-blue-500 transition-all"
-                  href="/most-popular-products"
+                  href="/products"
                 >
                   Popular Products
                 </Link>
