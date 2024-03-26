@@ -22,7 +22,7 @@ const page = async ({ params }: { params: { productId: string } }) => {
 
   return (
     <Container className="py-12">
-      <div className="flex gap-16">
+      <div className="flex flex-col md:flex-row gap-16">
         <Image
           src={product?.image}
           alt={product?.title}
@@ -31,7 +31,7 @@ const page = async ({ params }: { params: { productId: string } }) => {
           className="w-[350px] h-[350px]"
         />
         <div className="space-y-2">
-          <h1 className="text-4xl font-bold">{product.title}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold">{product.title}</h1>
           <h5 className="text-2xl font-extrabold text-blue-500">
             Price: ${product.price}
           </h5>

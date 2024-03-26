@@ -6,7 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const MostPopularProduct = async () => {
   const res = await fetch(
-    "https://cute-laugh-backend.vercel.app/api/flash-sale",
+    "https://cute-laugh-backend.vercel.app/api/products",
     {
       next: {
         revalidate: 30,
