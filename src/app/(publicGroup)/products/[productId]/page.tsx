@@ -24,8 +24,8 @@ const page = async ({ params }: { params: { productId: string } }) => {
     <Container className="py-12">
       <div className="flex gap-16">
         <Image
-          src={product.image}
-          alt={product.title}
+          src={product?.image}
+          alt={product?.title}
           width={400}
           height={400}
           className="w-[350px] h-[350px]"
