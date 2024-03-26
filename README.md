@@ -1,10 +1,34 @@
-##Cute Laugh
+#  Cute Laugh
 
-## Run Project Locally
 
-1. Clone the repository.
-2. Install dependencies using `npm install`.
-3. Run the server using `npm run dev`.
-   First, run the development server:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run Locally
+
+Clone the project from github
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+### Used Dependencies
+
+- #### [react-icon](https://react-icons.github.io/react-icons/)
+- #### [shadecn/ui](https://ui.shadcn.com/)
