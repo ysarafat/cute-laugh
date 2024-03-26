@@ -2,6 +2,7 @@ import { TProduct } from "@/types/product";
 import Image from "next/image";
 import Link from "next/link";
 import { ImPower } from "react-icons/im";
+import ProductRating from "./Rating";
 type TCard = {
   product: TProduct;
   sales?: boolean;
@@ -33,6 +34,10 @@ const Card = ({ product, sales }: TCard) => {
         <h3 className="truncate text-center text-xl font-semibold mt-2">
           {product.title}
         </h3>
+        <div className="flex flex-col items-center justify-between mt-5">
+          <span className="text-lg font-bold ">{product.category}</span>
+          <ProductRating rating={product.ratings} />
+        </div>
         <div className="flex items-center justify-between mt-5">
           <span className="text-2xl font-bold text-blue-500 ">
             ${product.price}

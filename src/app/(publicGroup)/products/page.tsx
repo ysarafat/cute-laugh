@@ -8,7 +8,9 @@ const Products = async ({
   searchParams: { category: string };
 }) => {
   const res = await fetch(
-    `https://cute-laugh-backend.vercel.app/api/products`,
+    `https://cute-laugh-backend.vercel.app/api/products?${
+      searchParams.category ? `category=` + searchParams.category : ""
+    }`,
     {
       cache: "no-store",
     }

@@ -1,5 +1,6 @@
 import image from "@/../public/hero-bg.webp";
 import Image from "next/image";
+import Link from "next/link";
 import Container from "../../shared/Container";
 import TopProduct from "./TopProduct";
 const Hero = () => {
@@ -19,9 +20,11 @@ const Hero = () => {
             <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-5 rounded-md border border-blue-500 transition-all">
               Get Offer
             </button>
-            <button className="bg-white hover:bg-blue-50 text-blue-500 py-2 px-5 rounded-md border border-blue-500 transition-all ml-4">
-              Flash Sale
-            </button>
+            <Link href="/flash-sale">
+              <button className="bg-white hover:bg-blue-50 text-blue-500 py-2 px-5 rounded-md border border-blue-500 transition-all ml-4">
+                Flash Sale
+              </button>
+            </Link>
           </div>
         </div>
         <div>

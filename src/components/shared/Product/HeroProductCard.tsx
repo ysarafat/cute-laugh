@@ -1,5 +1,6 @@
 import { TProduct } from "@/types/product";
 import Image from "next/image";
+import Link from "next/link";
 type TCard = {
   product: TProduct;
   sales?: boolean;
@@ -28,9 +29,9 @@ const HeroProductCard = ({ product }: TCard) => {
           <span className="text-xl font-bold text-blue-500 ">
             ${product.price}
           </span>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-5 rounded-lg flex items-center gap-x-2 hover:shadow-md transition-all">
-            Details
-          </button>
+          <Link href={`/products/${product._id}`}>
+            <button className="btn">View Details</button>
+          </Link>
         </div>
       </div>
     </div>

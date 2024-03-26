@@ -2,7 +2,7 @@ import Container from "@/components/shared/Container";
 import Image from "next/image";
 import Link from "next/link";
 
-const TopCategories = async () => {
+const AllCategories = async () => {
   const res = await fetch(
     "https://cute-laugh-backend.vercel.app/api/categories",
     {
@@ -14,15 +14,15 @@ const TopCategories = async () => {
   const { data: categories } = await res.json();
 
   return (
-    <Container>
-      <div className="text-center my-10">
-        <h1 className="text-4xl font-bold">Top Categories</h1>
-        <p>
+    <Container className="my-12">
+      <div className="">
+        <h1 className="text-4xl font-bold">All Categories</h1>
+        <p className="mt-2">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque,
           corrupti.
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
         {categories?.map((category: any) => (
           <Link
             href={`/products?category=${category.title} `}
@@ -51,4 +51,4 @@ const TopCategories = async () => {
   );
 };
 
-export default TopCategories;
+export default AllCategories;
