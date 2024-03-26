@@ -45,9 +45,12 @@ const MobileNav = () => {
               <Link href="/contact-us">Contact Us</Link>
             </li>
           </ul>
-          <button className="border bg-white py-1 px-4  text-lg rounded-md w-full mt-5">
-            Login
-          </button>
+          <Link
+            href="/dashboard/all-products"
+            className="border bg-white py-1 px-4  text-lg rounded-md w-full mt-5"
+          >
+            Dashboard
+          </Link>
         </div>
       )}
     </div>

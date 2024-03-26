@@ -32,9 +32,12 @@ const Navbar = () => {
         </div>
         <MobileNav />
         <div className="hidden md:block">
-          <button className="border bg-white py-1 px-4  rounded-md">
-            Login
-          </button>
+          <Link
+            href="/dashboard/all-products"
+            className="border bg-white py-1 px-4  text-lg rounded-md w-full mt-5"
+          >
+            Dashboard
+          </Link>
         </div>
       </Container>
     </div>
