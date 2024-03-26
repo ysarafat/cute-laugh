@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaProductHunt } from "react-icons/fa";
+import { FaHome, FaProductHunt } from "react-icons/fa";
 
 const routes = [
   {
@@ -10,6 +10,12 @@ const routes = [
     icon: FaProductHunt,
     href: "/dashboard/all-products",
     color: "text-sky-500",
+  },
+  {
+    label: "Back To Home",
+    icon: FaHome,
+    href: "/",
+    color: "text-white",
   },
 ];
 const Sidebar = () => {

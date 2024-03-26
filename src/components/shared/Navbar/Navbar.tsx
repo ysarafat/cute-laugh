@@ -9,7 +9,7 @@ const Navbar = () => {
       <Container className="flex justify-between items-center ">
         <Logo />
         <div className="hidden md:block">
-          <ul className="flex items-center gap-x-4">
+          <ul className="flex items-center gap-x-5">
             <li>
               <Link href="/">Home</Link>
             </li>
@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="hidden md:block">
           <Link
             href="/dashboard/all-products"
-            className="border bg-white py-1 px-4  text-lg rounded-md w-full mt-5"
+            className="border bg-white py-2 px-4   rounded-md w-full mt-5"
           >
             Dashboard
           </Link>

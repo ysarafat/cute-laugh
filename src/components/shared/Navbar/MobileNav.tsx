@@ -24,8 +24,8 @@ const MobileNav = () => {
       )}
 
       {isOpen && (
-        <div className="absolute top-[61px] right-0  py-10 px-5 bg-blue-100 min-h-[calc(100vh-61px)] w-1/2">
-          <ul className="flex flex-col items-center gap-4">
+        <div className="absolute z-[999] top-[61px] right-0  py-10 px-5 bg-blue-100 min-h-[calc(100vh-61px)] w-1/2">
+          <ul className="flex flex-col items-center gap-4 mb-5">
             <li>
               <Link href="/">Home</Link>
             </li>
@@ -45,12 +45,14 @@ const MobileNav = () => {
               <Link href="/contact-us">Contact Us</Link>
             </li>
           </ul>
-          <Link
-            href="/dashboard/all-products"
-            className="border bg-white py-1 px-4  text-lg rounded-md w-full mt-5"
-          >
-            Dashboard
-          </Link>
+          <div className="flex justify-center text-center">
+            <Link
+              href="/dashboard/all-products"
+              className="border bg-white py-2 px-  rounded-md w-full"
+            >
+              Dashboard
+            </Link>
+          </div>
         </div>
       )}
     </div>
